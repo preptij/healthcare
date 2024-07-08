@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { ID, Query } from "node-appwrite";
 
-import { Appointment } from "@/types/appwrite.types";
+import { Appointment } from "@/types/appwrite.types.ts";
 
 import {
   APPOINTMENT_COLLECTION_ID,
@@ -52,6 +52,14 @@ export const getRecentAppointmentList = async () => {
     // const cancelledAppointments = (
     //   appointments.documents as Appointment[]
     // ).filter((appointment) => appointment.status === "cancelled");
+
+const data = {
+    totalCount: appointments.total,al,
+    scheduledCount: scheduledAppointments.length,
+    pendingCount: pendingAppointments.length,
+    cancelledCount: cancelledAppointments.length,
+    documents: appointments.documents,
+    };
 
     const initialCounts = {
       scheduledCount: 0,
