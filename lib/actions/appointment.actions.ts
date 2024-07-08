@@ -53,13 +53,13 @@ export const getRecentAppointmentList = async () => {
     //   appointments.documents as Appointment[]
     // ).filter((appointment) => appointment.status === "cancelled");
 
-    // const data = {
-    //   totalCount: appointments.total,
-    //   scheduledCount: scheduledAppointments.length,
-    //   pendingCount: pendingAppointments.length,
-    //   cancelledCount: cancelledAppointments.length,
-    //   documents: appointments.documents,
-    // };
+   const data = {
+    totalCount: appointments.total,al,
+    scheduledCount: scheduledAppointments.length,
+    pendingCount: pendingAppointments.length,
+    cancelledCount: cancelledAppointments.length,
+    documents: appointments.documents,
+    };
 
     const initialCounts = {
       scheduledCount: 0,
